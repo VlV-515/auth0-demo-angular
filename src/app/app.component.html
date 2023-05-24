@@ -1,1 +1,30 @@
-<h1>Hola Mundo</h1>
+<main>
+  <div class="container d-flex flex-column align-items-center">
+    <h1>Bienvenido</h1>
+    <header class="text-center mb-3">
+      <button
+        class="btn btn-primary"
+        type="button"
+        (click)="btnLogin()"
+        *ngIf="(auth0Svc.isAuthenticated$ | async) === false"
+      >
+        Login
+      </button>
+      <button
+        class="btn btn-secondary"
+        type="button"
+        (click)="btnLogout()"
+        *ngIf="(auth0Svc.isAuthenticated$ | async) === true"
+      >
+        Logout
+      </button>
+    </header>
+    <section *ngIf="auth0Svc.user$ | async as user" class="text-center">
+      <div class="card">
+        <div class="card-body">
+          <pre>{{ user | json }}</pre>
+        </div>
+      </div>
+    </section>
+  </div>
+</main>
