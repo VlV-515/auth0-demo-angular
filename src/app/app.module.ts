@@ -11,13 +11,7 @@ import { environment } from 'src/environments/environment.prod';
   imports: [
     BrowserModule,
     AppRoutingModule,
-    AuthModule.forRoot({
-      domain: environment.auth0Credenctials.domain,
-      clientId: environment.auth0Credenctials.clienID,
-      authorizationParams: {
-        redirect_uri: window.location.origin,
-      },
-    }),
+    AuthModule.forRoot(environment.auth0Credentials),
   ],
   providers: [],
   bootstrap: [AppComponent],
