@@ -18,11 +18,7 @@ const routes: Routes = [
       },
     ],
   },
-  {
-    path: '**',
-    component: ErrorPageComponent,
-    pathMatch: 'full',
-  },
+  { path: 'error', component: ErrorPageComponent },
 ];
 
 @NgModule({

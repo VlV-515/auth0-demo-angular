@@ -1,6 +1,6 @@
 {
-  "name": "auth0-demo-angular",
-  "version": "0.0.0",
+  "name": "kore-miderp-login",
+  "version": "0.1.0",
   "scripts": {
     "ng": "ng",
     "start": "ng serve",

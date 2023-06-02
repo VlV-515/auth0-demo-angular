@@ -6,12 +6,14 @@ import { AppComponent } from './app.component';
 import { AuthModule } from '@auth0/auth0-angular';
 import { environment } from 'src/environments/environment.prod';
 import { ErrorPageComponent } from './error-page/error-page.component';
+import { RouterModule } from '@angular/router';
 
 @NgModule({
   declarations: [AppComponent, ErrorPageComponent],
   imports: [
     BrowserModule,
     AppRoutingModule,
+    RouterModule,
     AuthModule.forRoot(environment.auth0Credentials),
   ],
   providers: [],
